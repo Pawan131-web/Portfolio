@@ -1,6 +1,6 @@
 /* ==========================================================================
    PAWAN RIMAL - PROFESSIONAL ACADEMIC & TUITION CV
-   Fully Responsive for Mobile/Tablets + 100% Print-Perfect 1-Page A4 Layout
+   Increased Typography & Proportional Spacing (Screen, Mobile & Print A4)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -74,7 +74,7 @@ body.theme-burgundy {
 }
 
 html {
-  font-size: 13.5px;
+  font-size: 14.5px; /* Enhanced Base Text Size */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -123,7 +123,7 @@ body {
   align-items: center;
   gap: 8px;
   color: #f8fafc;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-family: var(--font-heading);
 }
 
@@ -138,16 +138,16 @@ body {
 .action-buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .theme-selector {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: #cbd5e1;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
 }
 
 .theme-selector select {
@@ -155,8 +155,8 @@ body {
   color: #f1f5f9;
   border: 1px solid #475569;
   border-radius: 6px;
-  padding: 5px 10px;
-  font-size: 0.82rem;
+  padding: 6px 12px;
+  font-size: 0.85rem;
   font-family: var(--font-body);
   outline: none;
   cursor: pointer;
@@ -165,28 +165,17 @@ body {
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
+  gap: 7px;
+  padding: 7px 16px;
   border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.88rem;
+  font-weight: 600;
   font-family: var(--font-heading);
   cursor: pointer;
   transition: all 0.18s ease-in-out;
   border: none;
   outline: none;
   text-decoration: none;
-}
-
-.btn-secondary {
-  background: #1e293b;
-  color: #e2e8f0;
-  border: 1px solid #475569;
-}
-.btn-secondary:hover {
-  background: #334155;
-  color: #ffffff;
-  border-color: #64748b;
 }
 
 .btn-primary {
@@ -207,7 +196,7 @@ body {
   border-radius: 8px;
   padding: 7px 14px;
   color: #94a3b8;
-  font-size: 0.80rem;
+  font-size: 0.82rem;
   text-align: center;
 }
 .print-tip strong {
@@ -231,7 +220,7 @@ body {
   background: var(--main-bg);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
   display: grid;
-  grid-template-columns: 73mm 137mm; /* Proportional two-column split */
+  grid-template-columns: 75mm 135mm; /* Balanced 2-column proportion */
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -244,7 +233,7 @@ body {
 .cv-sidebar {
   background-color: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border);
-  padding: 22px 16px 18px 18px;
+  padding: 24px 18px 22px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -255,12 +244,12 @@ body {
 .profile-photo-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .photo-frame {
-  width: 104px;
-  height: 104px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #ffffff;
@@ -280,13 +269,13 @@ body {
 /* Sidebar Headings */
 .sidebar-title {
   font-family: var(--font-heading);
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--primary-dark);
-  margin-bottom: 6px;
-  padding-bottom: 3px;
+  margin-bottom: 7px;
+  padding-bottom: 3.5px;
   border-bottom: 1.5px solid var(--primary-border);
   display: flex;
   align-items: center;
@@ -298,14 +287,14 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 4.5px;
 }
 
 .contact-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 3.5px 6px;
+  padding: 4px 6px;
   border-radius: 5px;
   text-decoration: none;
   color: inherit;
@@ -322,8 +311,8 @@ body {
 }
 
 .contact-icon {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   color: var(--primary);
   flex-shrink: 0;
 }
@@ -335,11 +324,11 @@ body {
 .contact-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  line-height: 1.22;
 }
 
 .contact-text .label {
-  font-size: 0.62rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--text-light);
@@ -347,7 +336,7 @@ body {
 }
 
 .contact-text .value {
-  font-size: 0.78rem;
+  font-size: 0.83rem;
   color: var(--text-dark);
   font-weight: 500;
   word-break: break-word;
@@ -360,9 +349,9 @@ body {
 .education-timeline {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 9px;
   position: relative;
-  padding-left: 9px;
+  padding-left: 10px;
   border-left: 1.5px solid var(--primary-border);
   margin-left: 3px;
 }
@@ -374,10 +363,10 @@ body {
 .edu-item::before {
   content: '';
   position: absolute;
-  left: -13px;
-  top: 4px;
-  width: 5.5px;
-  height: 5.5px;
+  left: -14.5px;
+  top: 4.5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--primary);
   border: 1.5px solid #ffffff;
@@ -385,43 +374,24 @@ body {
 
 .edu-degree {
   font-family: var(--font-heading);
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--text-dark);
-  line-height: 1.2;
+  line-height: 1.22;
 }
 
 .edu-institution {
-  font-size: 0.74rem;
+  font-size: 0.79rem;
   font-weight: 600;
   color: var(--primary);
-  line-height: 1.18;
+  line-height: 1.2;
 }
 
 .edu-meta {
-  font-size: 0.67rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
-  line-height: 1.15;
-  margin-top: 1px;
-}
-
-/* Subject Tags */
-.subject-tags {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5px;
-}
-
-.subject-pill {
-  background: #ffffff;
-  border: 1px solid var(--primary-border);
-  color: var(--primary-dark);
-  font-size: 0.71rem;
-  font-weight: 600;
-  padding: 2.5px 7px;
-  border-radius: 4px;
-  line-height: 1.2;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  line-height: 1.18;
+  margin-top: 1.5px;
 }
 
 /* Teaching Strengths Tags */
@@ -429,23 +399,23 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 3.5px;
+  gap: 4px;
 }
 
 .tag {
   background: #ffffff;
   border: 1px solid var(--sidebar-border);
   color: var(--text-main);
-  font-size: 0.70rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  padding: 2.5px 6px;
+  padding: 3px 7px;
   border-radius: 4px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 /* Technical Skills Matrix */
 .tech-group {
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 .tech-group:last-child {
   margin-bottom: 0;
@@ -453,27 +423,27 @@ body {
 
 .tech-category {
   display: block;
-  font-size: 0.66rem;
+  font-size: 0.70rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--primary);
-  margin-bottom: 2.5px;
+  margin-bottom: 3px;
 }
 
 .tech-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 3.5px;
 }
 
 .tech-pills span {
   background: #ffffff;
   border: 1px solid var(--sidebar-border);
   color: var(--text-dark);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   font-weight: 500;
-  padding: 1.5px 5px;
+  padding: 2px 6px;
   border-radius: 3px;
 }
 
@@ -481,16 +451,16 @@ body {
 .meta-pills {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  font-size: 0.70rem;
+  gap: 3.5px;
+  font-size: 0.76rem;
   color: var(--text-main);
 }
 .availability-badge {
   color: var(--primary);
   font-weight: 600;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   background: var(--primary-light);
-  padding: 2px 5px;
+  padding: 2.5px 6px;
   border-radius: 3px;
   border: 1px solid var(--primary-border);
   margin-top: 2px;
@@ -500,23 +470,22 @@ body {
    6. RIGHT MAIN BODY (HEADER, OBJECTIVE, PROJECTS, METHODOLOGY)
    -------------------------------------------------------------------------- */
 .cv-main {
-  padding: 22px 22px 18px 22px;
+  padding: 24px 24px 22px 24px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 13px;
+  justify-content: space-between;
   box-sizing: border-box;
   background: #ffffff;
 }
 
 /* Main Header */
 .main-header {
-  margin-bottom: 0px;
+  margin-bottom: 2px;
 }
 
 .candidate-name {
   font-family: var(--font-heading);
-  font-size: 2.15rem;
+  font-size: 2.30rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--primary-dark);
@@ -526,18 +495,18 @@ body {
 
 .candidate-title {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--accent);
   letter-spacing: 0.01em;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .header-divider {
-  width: 52px;
+  width: 56px;
   height: 3.5px;
   background: var(--primary);
-  margin-top: 7px;
+  margin-top: 8px;
   border-radius: 2px;
 }
 
@@ -548,24 +517,24 @@ body {
 }
 
 .section-heading-wrapper {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .main-section-title {
   font-family: var(--font-heading);
-  font-size: 0.90rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: var(--primary-dark);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  padding-bottom: 3px;
+  padding-bottom: 3.5px;
   border-bottom: 1.5px solid var(--primary-border);
 }
 
 /* Objective Text */
 .objective-text {
-  font-size: 0.81rem;
-  line-height: 1.45;
+  font-size: 0.86rem;
+  line-height: 1.50;
   color: var(--text-main);
   text-align: justify;
 }
@@ -578,13 +547,13 @@ body {
 .projects-section {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 10px;
 }
 
 .project-item {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 2.5px;
 }
 
 .project-header {
@@ -601,7 +570,7 @@ body {
 
 .project-name {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.90rem;
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.25;
@@ -610,14 +579,14 @@ body {
 .project-link {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
+  gap: 3.5px;
   color: var(--accent);
   text-decoration: none;
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   font-weight: 600;
   font-family: var(--font-heading);
   background: var(--primary-light);
-  padding: 1.5px 6px;
+  padding: 2px 7px;
   border-radius: 4px;
   border: 1px solid var(--primary-border);
   transition: all 0.15s ease;
@@ -632,45 +601,45 @@ body {
 }
 
 .project-status-badge {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--primary);
   background: var(--primary-light);
-  padding: 1.5px 6px;
+  padding: 2px 7px;
   border-radius: 4px;
   border: 1px solid var(--primary-border);
   font-family: var(--font-heading);
 }
 
 .tech-stack-label {
-  font-size: 0.70rem;
+  font-size: 0.74rem;
   font-weight: 600;
   color: var(--text-muted);
   font-family: var(--font-heading);
 }
 
 .project-tagline {
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   font-style: italic;
   color: var(--text-muted);
-  line-height: 1.2;
+  line-height: 1.22;
 }
 
 .project-bullet-list {
   list-style: none;
   padding-left: 0;
-  margin-top: 2px;
+  margin-top: 3px;
   display: flex;
   flex-direction: column;
-  gap: 2.5px;
+  gap: 3px;
 }
 
 .project-bullet-list li {
-  font-size: 0.77rem;
-  line-height: 1.35;
+  font-size: 0.82rem;
+  line-height: 1.38;
   color: var(--text-main);
   position: relative;
-  padding-left: 11px;
+  padding-left: 12px;
 }
 
 .project-bullet-list li::before {
@@ -680,29 +649,29 @@ body {
   top: 0;
   color: var(--primary);
   font-weight: bold;
-  font-size: 0.85rem;
+  font-size: 0.90rem;
 }
 
 /* Approach & Methodology Cards */
 .approach-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 7px;
+  gap: 8px;
 }
 
 .approach-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 6px;
-  padding: 7px 9px;
+  padding: 8px 10px;
   display: flex;
-  gap: 8px;
+  gap: 9px;
   align-items: flex-start;
 }
 
 .approach-icon {
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   color: var(--primary);
   flex-shrink: 0;
   margin-top: 1px;
@@ -714,30 +683,21 @@ body {
 
 .approach-content h4 {
   font-family: var(--font-heading);
-  font-size: 0.77rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.2;
-  margin-bottom: 1.5px;
+  margin-bottom: 2px;
 }
 
 .approach-content p {
-  font-size: 0.70rem;
-  line-height: 1.28;
+  font-size: 0.74rem;
+  line-height: 1.30;
   color: var(--text-muted);
 }
 
 /* --------------------------------------------------------------------------
-   7. LIVE EDITING MODE HIGHLIGHTS
-   -------------------------------------------------------------------------- */
-[contenteditable="true"] {
-  outline: 1.5px dashed var(--accent) !important;
-  background: rgba(37, 99, 235, 0.05);
-  border-radius: 3px;
-}
-
-/* --------------------------------------------------------------------------
-   8. RESPONSIVE DESIGN (SCREENS / MOBILE / TABLETS)
+   7. RESPONSIVE DESIGN (SCREENS / MOBILE / TABLETS)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 860px) {
   body {
@@ -772,10 +732,10 @@ body {
 
   .cv-page {
     width: 100%;
-    max-width: 700px;
+    max-width: 720px;
     height: auto !important;
     max-height: none !important;
-    grid-template-columns: 1fr; /* Stack into single column */
+    grid-template-columns: 1fr;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     border-radius: 12px;
     overflow: visible;
@@ -784,8 +744,8 @@ body {
   .cv-sidebar {
     border-right: none;
     border-bottom: 1px solid var(--sidebar-border);
-    padding: 24px 20px;
-    gap: 16px;
+    padding: 26px 22px;
+    gap: 18px;
     border-radius: 12px 12px 0 0;
   }
 
@@ -794,26 +754,26 @@ body {
   }
 
   .photo-frame {
-    width: 112px;
-    height: 112px;
+    width: 116px;
+    height: 116px;
   }
 
   .cv-main {
-    padding: 24px 20px;
-    gap: 18px;
+    padding: 26px 22px;
+    gap: 20px;
     border-radius: 0 0 12px 12px;
   }
 
   .candidate-name {
-    font-size: 1.85rem;
+    font-size: 2.0rem;
   }
 
   .candidate-title {
-    font-size: 0.90rem;
+    font-size: 0.95rem;
   }
 
   .approach-grid {
-    grid-template-columns: 1fr; /* Single column cards on smaller tablets */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -839,11 +799,11 @@ body {
 
   .cv-sidebar,
   .cv-main {
-    padding: 18px 14px;
+    padding: 20px 16px;
   }
 
   .candidate-name {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
   }
 
   .project-title-row {
@@ -854,7 +814,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   9. PRINT OPTIMIZATIONS (100% 1-PAGE A4 GUARANTEE)
+   8. PRINT OPTIMIZATIONS (100% 1-PAGE A4 GUARANTEE)
    -------------------------------------------------------------------------- */
 @page {
   size: A4 portrait;
@@ -886,7 +846,7 @@ body {
     height: 297mm !important;
     max-height: 297mm !important;
     display: grid !important;
-    grid-template-columns: 73mm 137mm !important; /* Force 2 columns in print */
+    grid-template-columns: 75mm 135mm !important; /* Force 2 columns in print */
     box-shadow: none !important;
     border: none !important;
     border-radius: 0 !important;
