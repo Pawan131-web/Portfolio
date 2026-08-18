@@ -1,0 +1,777 @@
+/* ==========================================================================
+   PAWAN RIMAL - PROFESSIONAL 1-PAGE ACADEMIC & TUITION CV
+   Modern, Trustworthy, Screen & Print Perfect Layout
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. COLOR SCHEMES & CSS CUSTOM PROPERTIES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Default: Academic Navy */
+  --primary: #1e3a8a;          /* Deep Oxford/Royal Navy */
+  --primary-dark: #0f172a;     /* Midnight Navy / Slate */
+  --primary-light: #eff6ff;    /* Ice Blue Tint */
+  --primary-border: #bfdbfe;   /* Border highlight */
+  --accent: #2563eb;           /* Clear Cobalt Blue */
+  --accent-light: #dbeafe;     /* Subtle badge background */
+  
+  --sidebar-bg: #f8fafc;       /* Clean Off-White / Pale Slate */
+  --sidebar-border: #e2e8f0;   /* Crisp Divider */
+  --main-bg: #ffffff;
+  
+  --text-dark: #0f172a;        /* Deep Slate for high contrast text */
+  --text-main: #334155;        /* Primary Body */
+  --text-muted: #64748b;       /* Secondary details */
+  --text-light: #64748b;       /* Minor labels / metadata */
+  
+  --tag-bg: #ffffff;
+  --tag-border: #cbd5e1;
+
+  --card-bg: #f8fafc;
+  --card-border: #e2e8f0;
+
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Theme: Classic Slate */
+body.theme-slate {
+  --primary: #334155;
+  --primary-dark: #0f172a;
+  --primary-light: #f1f5f9;
+  --primary-border: #cbd5e1;
+  --accent: #475569;
+  --accent-light: #e2e8f0;
+}
+
+/* Theme: Oxford Emerald */
+body.theme-emerald {
+  --primary: #065f46;
+  --primary-dark: #022c22;
+  --primary-light: #ecfdf5;
+  --primary-border: #a7f3d0;
+  --accent: #059669;
+  --accent-light: #d1fae5;
+}
+
+/* Theme: Regal Burgundy */
+body.theme-burgundy {
+  --primary: #831843;
+  --primary-dark: #500724;
+  --primary-light: #fdf2f8;
+  --primary-border: #fbcfe8;
+  --accent: #be185d;
+  --accent-light: #fce7f3;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & GLOBAL STYLES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 13.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: #0f172a;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.3) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.5) 0px, transparent 50%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+/* --------------------------------------------------------------------------
+   3. SCREEN CONTROL BAR / TOOLBAR (NO-PRINT)
+   -------------------------------------------------------------------------- */
+.control-bar {
+  width: 100%;
+  max-width: 960px;
+  margin: 16px auto 14px;
+  padding: 0 16px;
+  z-index: 100;
+}
+
+.control-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 10px 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f8fafc;
+  font-size: 0.95rem;
+  font-family: var(--font-heading);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.theme-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+.theme-selector select {
+  background: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: all 0.18s ease-in-out;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #475569;
+}
+.btn-secondary:hover {
+  background: #334155;
+  color: #ffffff;
+  border-color: #64748b;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.6);
+  transform: translateY(-1px);
+}
+
+.print-tip {
+  margin-top: 8px;
+  background: rgba(30, 41, 59, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 7px 14px;
+  color: #94a3b8;
+  font-size: 0.80rem;
+  text-align: center;
+}
+.print-tip strong {
+  color: #f1f5f9;
+}
+
+/* --------------------------------------------------------------------------
+   4. A4 PAGE CONTAINER & GRID STRUCTURE
+   -------------------------------------------------------------------------- */
+.page-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cv-page {
+  width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+  background: var(--main-bg);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: 73mm 137mm; /* Proportional two-column split */
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   5. LEFT SIDEBAR (PHOTO, CONTACT, EDUCATION, SKILLS)
+   -------------------------------------------------------------------------- */
+.cv-sidebar {
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  padding: 24px 16px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Photo Frame */
+.profile-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.photo-frame {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15), 0 0 0 1.5px var(--primary-border);
+  background: #e2e8f0;
+  position: relative;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Sidebar Headings */
+.sidebar-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid var(--primary-border);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Contact Details */
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.contact-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.contact-text .label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.contact-text .value,
+.contact-text a.value {
+  font-size: 0.78rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-word;
+}
+.contact-text a.value:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Education Timeline */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  padding-left: 9px;
+  border-left: 1.5px solid var(--primary-border);
+  margin-left: 3px;
+}
+
+.edu-item {
+  position: relative;
+}
+
+.edu-item::before {
+  content: '';
+  position: absolute;
+  left: -13px;
+  top: 4px;
+  width: 5.5px;
+  height: 5.5px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 1.5px solid #ffffff;
+}
+
+.edu-degree {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.edu-institution {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.18;
+}
+
+.edu-meta {
+  font-size: 0.67rem;
+  color: var(--text-muted);
+  line-height: 1.15;
+  margin-top: 1px;
+}
+
+/* Subject Tags */
+.subject-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5px;
+}
+
+.subject-pill {
+  background: #ffffff;
+  border: 1px solid var(--primary-border);
+  color: var(--primary-dark);
+  font-size: 0.71rem;
+  font-weight: 600;
+  padding: 2.5px 7px;
+  border-radius: 4px;
+  line-height: 1.2;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* Teaching Strengths Tags */
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5px;
+}
+
+.tag {
+  background: #ffffff;
+  border: 1px solid var(--sidebar-border);
+  color: var(--text-main);
+  font-size: 0.70rem;
+  font-weight: 500;
+  padding: 2.5px 6px;
+  border-radius: 4px;
+  line-height: 1.2;
+}
+
+/* Technical Skills Matrix */
+.tech-group {
+  margin-bottom: 4px;
+}
+.tech-group:last-child {
+  margin-bottom: 0;
+}
+
+.tech-category {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  margin-bottom: 2.5px;
+}
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.tech-pills span {
+  background: #ffffff;
+  border: 1px solid var(--sidebar-border);
+  color: var(--text-dark);
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 1.5px 5px;
+  border-radius: 3px;
+}
+
+/* Languages & Availability */
+.meta-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.70rem;
+  color: var(--text-main);
+}
+.availability-badge {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.68rem;
+  background: var(--primary-light);
+  padding: 2px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--primary-border);
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   6. RIGHT MAIN BODY (HEADER, OBJECTIVE, PROJECTS, METHODOLOGY)
+   -------------------------------------------------------------------------- */
+.cv-main {
+  padding: 22px 22px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 13px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+/* Main Header */
+.main-header {
+  margin-bottom: 0px;
+}
+
+.candidate-name {
+  font-family: var(--font-heading);
+  font-size: 2.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--primary-dark);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.candidate-title {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+  margin-top: 4px;
+}
+
+.header-divider {
+  width: 52px;
+  height: 3.5px;
+  background: var(--primary);
+  margin-top: 7px;
+  border-radius: 2px;
+}
+
+/* Section Headings */
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-heading-wrapper {
+  margin-bottom: 5px;
+}
+
+.main-section-title {
+  font-family: var(--font-heading);
+  font-size: 0.90rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid var(--primary-border);
+}
+
+/* Objective Text */
+.objective-text {
+  font-size: 0.81rem;
+  line-height: 1.45;
+  color: var(--text-main);
+  text-align: justify;
+}
+.objective-text strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Project Items */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.project-name {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.25;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  background: var(--primary-light);
+  padding: 1.5px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-border);
+}
+.project-link:hover {
+  text-decoration: underline;
+  background: var(--accent-light);
+}
+
+.project-status-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 1.5px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-border);
+  font-family: var(--font-heading);
+}
+
+.tech-stack-label {
+  font-size: 0.70rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+}
+
+.project-tagline {
+  font-size: 0.74rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.project-bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+}
+
+.project-bullet-list li {
+  font-size: 0.77rem;
+  line-height: 1.35;
+  color: var(--text-main);
+  position: relative;
+  padding-left: 11px;
+}
+
+.project-bullet-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+/* Approach & Methodology Cards */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+}
+
+.approach-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 7px 9px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.approach-icon {
+  width: 17px;
+  height: 17px;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.approach-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.approach-content h4 {
+  font-family: var(--font-heading);
+  font-size: 0.77rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 1.5px;
+}
+
+.approach-content p {
+  font-size: 0.70rem;
+  line-height: 1.28;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   7. LIVE EDITING MODE HIGHLIGHTS
+   -------------------------------------------------------------------------- */
+[contenteditable="true"] {
+  outline: 1.5px dashed var(--accent) !important;
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   8. PRINT OPTIMIZATIONS (100% 1-PAGE A4 GUARANTEE)
+   -------------------------------------------------------------------------- */
+@page {
+  size: A4 portrait;
+  margin: 0mm !important;
+}
+
+@media print {
+  /* Hide unnecessary browser/screen elements */
+  .no-print,
+  .control-bar {
+    display: none !important;
+  }
+
+  body {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 100% !important;
+  }
+
+  .page-container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cv-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    overflow: hidden !important;
+  }
+
+  /* Keep colors exact */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Make links appear clean in print without browser URL annotations */
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .project-link {
+    color: var(--primary) !important;
+  }
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawan Rimal - Curriculum Vitae | Academic Tutor & ICT Mentor</title>
+  <meta name="description" content="Professional One-Page Academic & Tuition Teaching CV for Pawan Rimal - BIM Student, Tutor, and Web Developer.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-navy">
+
+  <!-- Interactive Control Bar (Hidden during Print/PDF Export) -->
+  <aside class="control-bar no-print" aria-label="CV Controls">
+    <div class="control-bar-inner">
+      <div class="brand-badge">
+        <span class="status-dot"></span>
+        <strong>Pawan Rimal &mdash; CV Builder & Preview</strong>
+      </div>
+      
+      <div class="action-buttons">
+        <!-- Theme Selector -->
+        <div class="theme-selector">
+          <label for="themeSelect">Palette:</label>
+          <select id="themeSelect" aria-label="Select Theme">
+            <option value="theme-navy">Academic Navy (Default)</option>
+            <option value="theme-slate">Classic Slate</option>
+            <option value="theme-emerald">Oxford Emerald</option>
+            <option value="theme-burgundy">Regal Burgundy</option>
+          </select>
+        </div>
+
+        <!-- Change Photo -->
+        <label for="photoUpload" class="btn btn-secondary" title="Upload and update your photo">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          <span>Change Photo</span>
+        </label>
+        <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+
+        <!-- Live Edit Toggle -->
+        <button id="editToggleBtn" class="btn btn-secondary" title="Click to directly edit text on the CV">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          <span id="editBtnText">Enable Live Edit</span>
+        </button>
+
+        <!-- Print / Save PDF -->
+        <button id="printBtn" class="btn btn-primary" title="Print or save as 1-Page PDF">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Print / Save as PDF</span>
+        </button>
+      </div>
+    </div>
+    <div class="print-tip">
+      💡 <strong>Tip for 1-Page PDF Export:</strong> In the print preview window, select <em>Destination: Save as PDF</em>, <em>Paper size: A4</em>, <em>Margins: Default/None</em>, and check <em>Background graphics</em>.
+    </div>
+  </aside>
+
+  <!-- Main A4 Printable CV Container -->
+  <main class="page-container" id="cvContent">
+    <div class="cv-page">
+      
+      <!-- LEFT SIDEBAR COLUMN (33%) -->
+      <aside class="cv-sidebar">
+        
+        <!-- Profile Photo Frame -->
+        <div class="profile-photo-wrapper">
+          <div class="photo-frame">
+            <img id="profilePhoto" src="photo.jpg" alt="Pawan Rimal" onerror="this.src='FB_IMG_1637249567112 (1).jpg'">
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <section class="sidebar-section contact-section">
+          <h2 class="sidebar-title">Contact</h2>
+          <ul class="contact-list">
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="contact-text">
+                <span class="label">Phone</span>
+                <a href="tel:9806640515" class="value">9806640515</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-text">
+                <span class="label">Email</span>
+                <a href="mailto:rimalpawan4@gmail.com" class="value">rimalpawan4@gmail.com</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <div class="contact-text">
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/pawan-rimal-225a5b35b/" target="_blank" rel="noopener noreferrer" class="value">pawan-rimal</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <div class="contact-text">
+                <span class="label">GitHub</span>
+                <a href="https://github.com/Pawan131-web" target="_blank" rel="noopener noreferrer" class="value">Pawan131-web</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-text">
+                <span class="label">Location</span>
+                <span class="value">Pokhara, Nepal</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section class="sidebar-section education-section">
+          <h2 class="sidebar-title">Education</h2>
+          <div class="education-timeline">
+            
+            <div class="edu-item">
+              <div class="edu-degree">Bachelor of Information Management (BIM)</div>
+              <div class="edu-institution">Janapriya Multiple Campus</div>
+              <div class="edu-meta">8-Semester Degree (TU Affiliated)</div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-degree">+2 / Higher Secondary Education</div>
+              <div class="edu-institution">Amar Singh Secondary School</div>
+              <div class="edu-meta">Higher Secondary Board</div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-degree">SEE / Grade 10</div>
+              <div class="edu-institution">Sainik Awasiya Mahavidyalaya</div>
+              <div class="edu-meta">Secondary Education Examination</div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Target Tutoring Subjects -->
+        <section class="sidebar-section">
+          <h2 class="sidebar-title">Tutoring Subjects</h2>
+          <div class="subject-tags">
+            <span class="subject-pill">Computer Science / ICT</span>
+            <span class="subject-pill">School Mathematics (6-10)</span>
+            <span class="subject-pill">SEE Preparation & Science</span>
+            <span class="subject-pill">Web Dev Basics (HTML/CSS/JS)</span>
+            <span class="subject-pill">MS Office & Computer Basics</span>
+          </div>
+        </section>
+
+        <!-- Teaching & Interpersonal Skills -->
+        <section class="sidebar-section skills-section">
+          <h2 class="sidebar-title">Teaching Strengths</h2>
+          <ul class="tag-list">
+            <li class="tag">Clear Concept Breakdown</li>
+            <li class="tag">Patient Student Mentoring</li>
+            <li class="tag">Interactive Communication</li>
+            <li class="tag">Problem-Solving Guidance</li>
+            <li class="tag">Structured Lesson Planning</li>
+            <li class="tag">Time Management & Punctuality</li>
+          </ul>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="sidebar-section skills-section">
+          <h2 class="sidebar-title">Technical Skills</h2>
+          <div class="tech-group">
+            <span class="tech-category">Web & Programming</span>
+            <div class="tech-pills">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>React.js</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+
+          <div class="tech-group">
+            <span class="tech-category">Database & Tools</span>
+            <div class="tech-pills">
+              <span>MongoDB</span>
+              <span>Database Concepts</span>
+              <span>Git & GitHub</span>
+            </div>
+          </div>
+
+          <div class="tech-group">
+            <span class="tech-category">Core Computing</span>
+            <div class="tech-pills">
+              <span>Computer Fundamentals</span>
+              <span>MS Word</span>
+              <span>MS Excel</span>
+              <span>PowerPoint</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Languages & Availability -->
+        <section class="sidebar-section languages-section">
+          <h2 class="sidebar-title">Languages & Modes</h2>
+          <div class="meta-pills">
+            <span><strong>English:</strong> Professional</span>
+            <span><strong>Nepali:</strong> Native</span>
+            <span class="availability-badge">✓ In-Person (Pokhara) & Online</span>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- RIGHT MAIN BODY COLUMN (67%) -->
+      <section class="cv-main">
+        
+        <!-- Header / Name & Title -->
+        <header class="main-header">
+          <h1 class="candidate-name">Pawan Rimal</h1>
+          <div class="candidate-title">BIM Student &bull; Academic Tutor & ICT Mentor</div>
+          <div class="header-divider"></div>
+        </header>
+
+        <!-- Career & Teaching Objective -->
+        <section class="main-section objective-section">
+          <div class="section-heading-wrapper">
+            <h2 class="main-section-title">Academic & Teaching Objective</h2>
+          </div>
+          <p class="objective-text">
+            Dedicated and dependable <strong>Bachelor of Information Management (BIM)</strong> student with a solid technical foundation and a genuine enthusiasm for academic teaching and mentoring. Committed to helping students build confidence and strong conceptual clarity by breaking down complex topics into simple, structured, and relatable explanations. Possesses a patient and adaptable teaching approach suited for diverse learning paces, combined with practical IT and computer knowledge to deliver an organized, interactive, and goal-oriented learning environment.
+          </p>
+        </section>
+
+        <!-- Practical & Project Experience -->
+        <section class="main-section projects-section">
+          <div class="section-heading-wrapper">
+            <h2 class="main-section-title">Practical Project Experience</h2>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title-row">
+                <h3 class="project-name">DreamSky Consultancy CRM System</h3>
+                <a href="https://dreamsky.com.np/" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <span>dreamsky.com.np</span>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+              <div class="project-tagline">Consultancy Operations & Student Information Management</div>
+            </div>
+            <ul class="project-bullet-list">
+              <li>Contributed to developing a web-based management platform to streamline operational workflows and student records for an educational consultancy.</li>
+              <li>Assisted in building structured forms and data interfaces for managing student inquiries, document tracking, and record updates.</li>
+              <li>Applied practical software engineering principles, client-side data handling, and clean responsive UI design.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title-row">
+                <h3 class="project-name">Annapurna Groceries</h3>
+                <span class="project-status-badge">In Active Development</span>
+              </div>
+              <div class="project-tagline">Modern E-Commerce & Grocery Web Application</div>
+            </div>
+            <ul class="project-bullet-list">
+              <li>Currently developing a user-focused e-commerce web platform for online grocery browsing and simplified ordering.</li>
+              <li>Implementing clear category navigation, interactive shopping cart mechanics, and modular component architecture.</li>
+              <li>Designing efficient data schemas for product inventory, search filtering, and seamless user checkout.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title-row">
+                <h3 class="project-name">Academic & Practical Software Projects</h3>
+                <span class="tech-stack-label">React &bull; Node.js &bull; MongoDB</span>
+              </div>
+              <div class="project-tagline">Coursework & Hands-On Web Development Applications</div>
+            </div>
+            <ul class="project-bullet-list">
+              <li>Developed software and web modules to translate theoretical computer science and database principles into functioning applications.</li>
+              <li>Implemented responsive interfaces with React, back-end API routing with Node.js, and structured collections in MongoDB.</li>
+              <li>Demonstrated solid grasp of front-end logic, database CRUD operations, and version control best practices via Git & GitHub.</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <!-- Tutoring Methodology & Key Strengths -->
+        <section class="main-section approach-section">
+          <div class="section-heading-wrapper">
+            <h2 class="main-section-title">Teaching Methodology & Tutoring Strengths</h2>
+          </div>
+          
+          <div class="approach-grid">
+            <div class="approach-card">
+              <div class="approach-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              </div>
+              <div class="approach-content">
+                <h4>Concept-First Clarity</h4>
+                <p>Prioritizing core principles and logical reasoning before formulaic steps, ensuring deep long-term retention.</p>
+              </div>
+            </div>
+
+            <div class="approach-card">
+              <div class="approach-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <div class="approach-content">
+                <h4>Patient & Adaptive Pacing</h4>
+                <p>Encouraging open questions without hesitation, adapting teaching pace to match each student's unique learning curve.</p>
+              </div>
+            </div>
+
+            <div class="approach-card">
+              <div class="approach-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div class="approach-content">
+                <h4>Practical & IT Fundamentals</h4>
+                <p>Using clear visual examples, computer tools, and structured problem breakdowns to make abstract topics relatable.</p>
+              </div>
+            </div>
+
+            <div class="approach-card">
+              <div class="approach-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <div class="approach-content">
+                <h4>Consistent Assessment</h4>
+                <p>Incorporating regular review questions, constructive feedback, and exam-oriented problem-solving routines.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
