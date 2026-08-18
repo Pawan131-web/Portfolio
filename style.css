@@ -1,6 +1,6 @@
 /* ==========================================================================
-   PAWAN RIMAL - PROFESSIONAL 1-PAGE ACADEMIC & TUITION CV
-   Modern, Trustworthy, Screen & Print Perfect Layout
+   PAWAN RIMAL - PROFESSIONAL ACADEMIC & TUITION CV
+   Fully Responsive for Mobile/Tablets + 100% Print-Perfect 1-Page A4 Layout
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -215,12 +215,13 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   4. A4 PAGE CONTAINER & GRID STRUCTURE
+   4. A4 DESKTOP PAGE CONTAINER & GRID STRUCTURE
    -------------------------------------------------------------------------- */
 .page-container {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 0 16px;
 }
 
 .cv-page {
@@ -234,6 +235,7 @@ body {
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  border-radius: 2px;
 }
 
 /* --------------------------------------------------------------------------
@@ -242,7 +244,7 @@ body {
 .cv-sidebar {
   background-color: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border);
-  padding: 24px 16px 20px 18px;
+  padding: 22px 16px 18px 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -257,8 +259,8 @@ body {
 }
 
 .photo-frame {
-  width: 105px;
-  height: 105px;
+  width: 104px;
+  height: 104px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #ffffff;
@@ -278,7 +280,7 @@ body {
 /* Sidebar Headings */
 .sidebar-title {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -296,13 +298,27 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
-.contact-list li {
+.contact-row {
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 3.5px 6px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s ease;
+}
+
+.contact-row:not(.no-hover):hover {
+  background: var(--primary-light);
+  transform: translateX(2px);
+}
+
+.contact-row:not(.no-hover):active {
+  transform: scale(0.98);
 }
 
 .contact-icon {
@@ -330,17 +346,14 @@ body {
   font-weight: 600;
 }
 
-.contact-text .value,
-.contact-text a.value {
+.contact-text .value {
   font-size: 0.78rem;
   color: var(--text-dark);
-  text-decoration: none;
   font-weight: 500;
   word-break: break-word;
 }
-.contact-text a.value:hover {
+.contact-row:hover .value {
   color: var(--accent);
-  text-decoration: underline;
 }
 
 /* Education Timeline */
@@ -607,10 +620,15 @@ body {
   padding: 1.5px 6px;
   border-radius: 4px;
   border: 1px solid var(--primary-border);
+  transition: all 0.15s ease;
 }
 .project-link:hover {
   text-decoration: underline;
   background: var(--accent-light);
+  transform: translateY(-1px);
+}
+.project-link:active {
+  transform: scale(0.97);
 }
 
 .project-status-badge {
@@ -719,7 +737,124 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   8. PRINT OPTIMIZATIONS (100% 1-PAGE A4 GUARANTEE)
+   8. RESPONSIVE DESIGN (SCREENS / MOBILE / TABLETS)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 860px) {
+  body {
+    padding: 12px;
+    padding-bottom: 30px;
+  }
+
+  .control-bar {
+    margin: 8px 0 16px;
+    padding: 0;
+  }
+
+  .control-bar-inner {
+    padding: 12px 14px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .brand-badge {
+    justify-content: center;
+  }
+
+  .action-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .page-container {
+    padding: 0;
+  }
+
+  .cv-page {
+    width: 100%;
+    max-width: 700px;
+    height: auto !important;
+    max-height: none !important;
+    grid-template-columns: 1fr; /* Stack into single column */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    overflow: visible;
+  }
+
+  .cv-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--sidebar-border);
+    padding: 24px 20px;
+    gap: 16px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .profile-photo-wrapper {
+    margin-bottom: 8px;
+  }
+
+  .photo-frame {
+    width: 112px;
+    height: 112px;
+  }
+
+  .cv-main {
+    padding: 24px 20px;
+    gap: 18px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .candidate-name {
+    font-size: 1.85rem;
+  }
+
+  .candidate-title {
+    font-size: 0.90rem;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr; /* Single column cards on smaller tablets */
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    padding: 8px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .theme-selector,
+  .action-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .theme-selector select {
+    flex: 1;
+  }
+
+  .cv-sidebar,
+  .cv-main {
+    padding: 18px 14px;
+  }
+
+  .candidate-name {
+    font-size: 1.6rem;
+  }
+
+  .project-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. PRINT OPTIMIZATIONS (100% 1-PAGE A4 GUARANTEE)
    -------------------------------------------------------------------------- */
 @page {
   size: A4 portrait;
@@ -750,14 +885,26 @@ body {
     width: 210mm !important;
     height: 297mm !important;
     max-height: 297mm !important;
+    display: grid !important;
+    grid-template-columns: 73mm 137mm !important; /* Force 2 columns in print */
     box-shadow: none !important;
     border: none !important;
+    border-radius: 0 !important;
     page-break-after: avoid !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     overflow: hidden !important;
+  }
+
+  .cv-sidebar {
+    border-right: 1px solid var(--sidebar-border) !important;
+    border-bottom: none !important;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   /* Keep colors exact */
