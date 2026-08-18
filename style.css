@@ -189,20 +189,6 @@ body {
   transform: translateY(-1px);
 }
 
-.print-tip {
-  margin-top: 8px;
-  background: rgba(30, 41, 59, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  padding: 7px 14px;
-  color: #94a3b8;
-  font-size: 0.82rem;
-  text-align: center;
-}
-.print-tip strong {
-  color: #f1f5f9;
-}
-
 /* --------------------------------------------------------------------------
    4. A4 DESKTOP PAGE CONTAINER & GRID STRUCTURE
    -------------------------------------------------------------------------- */
