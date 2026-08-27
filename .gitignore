@@ -1,6 +1,31 @@
+# Dependencies
+node_modules
+portfolio/node_modules
+
+# Production builds
+dist
+portfolio/dist
+dist-ssr
+portfolio/dist-ssr
+
+# Logs & Debug
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment & Local settings
+.env
+.env.local
+*.local
+
+# IDE & Editor
+.vscode
+.idea
 .DS_Store
 Thumbs.db
-node_modules/
-.vscode/
-.idea/
-*.log
+.gemini/
+
+# Large video screencasts
+*.mp4
