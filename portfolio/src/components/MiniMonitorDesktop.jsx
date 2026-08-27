@@ -238,7 +238,7 @@ const SEARCH_DATABASE = [
     displayUrl: "https://dreamsky.com.np › consultancy-crm",
     siteName: "Dream Sky · Production CRM",
     category: "projects",
-    thumbnail: "/images/dreamsky_logo.png",
+    thumbnail: "./images/dreamsky_logo.png",
     snippet: "Production grade education consultancy CRM managing end to end visa application lifecycles, encrypted document verification, dynamic agent commissions, and interactive student/teacher IELTS portals.",
     sitelinks: [
       { label: "Live System: dreamsky.com.np", url: "https://dreamsky.com.np" },
@@ -254,7 +254,7 @@ const SEARCH_DATABASE = [
     displayUrl: "https://pawan131-web.github.io › Online-shopping",
     siteName: "Annapurna · E-Commerce Platform",
     category: "projects",
-    thumbnail: "/images/annapurna_icon_gold.png",
+    thumbnail: "./images/annapurna_icon_gold.png",
     snippet: "High converting boutique digital store featuring Cash on Delivery (COD) checkout pipelines, regulatory age verification gates, instant product filtering, and merchant sales analytics.",
     sitelinks: [
       { label: "Live Storefront Demo", url: "https://pawan131-web.github.io/Online-shopping-/idex.html" },
@@ -270,7 +270,7 @@ const SEARCH_DATABASE = [
     displayUrl: "https://github.com/Pawan131-web › skillaunch-engine",
     siteName: "GitHub · Campus Engine",
     category: "projects",
-    thumbnail: "/images/skillaunch_logo.png",
+    thumbnail: "./images/skillaunch_logo.png",
     snippet: "Campus wide student internship discovery engine that intelligently maps academic proficiencies against real enterprise job requirements with gap analysis and progression milestones.",
     sitelinks: [
       { label: "Campus Staging Hub", url: "https://github.com/Pawan131-web" },
@@ -285,7 +285,7 @@ const SEARCH_DATABASE = [
     displayUrl: "pawanrimal.dev › skills › technical-matrix",
     siteName: "Pawan Portfolio · Competencies",
     category: "skills",
-    thumbnail: "/images/skill_react.jpg",
+    thumbnail: "./images/skill_react.jpg",
     snippet: "Frontend Engineering: React.js (95%), Tailwind CSS (96%), JavaScript ES6+. Backend & APIs: Node.js (90%), Django Python (88%), Express. Databases: PostgreSQL (92%), MongoDB, MySQL. Infrastructure: Docker, Linux, Git.",
     sitelinks: [
       { label: "Frontend Architecture", url: "#" },
@@ -301,7 +301,7 @@ const SEARCH_DATABASE = [
     displayUrl: "pawanrimal.dev › experience › career-timeline",
     siteName: "Pawan Portfolio · Career",
     category: "experience",
-    thumbnail: "/images/photo.jpg",
+    thumbnail: "./images/photo.jpg",
     snippet: "Nepal Telecom (NTC) Networking & Web Infrastructure Intern (2026). Full Stack Freelance Developer (2022 to Present). Academic & ICT Programming Mentor guiding 30+ students in Pokhara.",
     sitelinks: [
       { label: "Nepal Telecom Role", url: "#" },
@@ -317,7 +317,7 @@ const SEARCH_DATABASE = [
     displayUrl: "tribhuvan-university.edu.np › pawan-rimal › bim",
     siteName: "Tribhuvan University · Credentials",
     category: "education",
-    thumbnail: "/images/normal.jpg",
+    thumbnail: "./images/normal.jpg",
     snippet: "Bachelor of Information Management (BIM) at Janapriya Multiple Campus, Tribhuvan University (2021 to Present). +2 Management & Computer Science at Amarsingh Model Secondary School (2019 to 2021).",
     sitelinks: [
       { label: "TU Janapriya BIM", url: "#" },
@@ -332,7 +332,7 @@ const SEARCH_DATABASE = [
     displayUrl: "github.com › Pawan131-web",
     siteName: "GitHub · Developer Profile",
     category: "socials",
-    thumbnail: "/images/pawan_cutout.png",
+    thumbnail: "./images/pawan_cutout.png",
     snippet: "Explore open-source repositories, full-stack CRM platforms, React & Django architectures, and web utilities engineered by Pawan Rimal (@Pawan131-web).",
     sitelinks: [
       { label: "Repositories Hub", url: "https://github.com/Pawan131-web" },
@@ -347,7 +347,7 @@ const SEARCH_DATABASE = [
     displayUrl: "facebook.com › pawan.rimal.779",
     siteName: "Facebook · Official Profile",
     category: "socials",
-    thumbnail: "/images/FB_IMG_1637249567112 (1).jpg",
+    thumbnail: "./images/FB_IMG_1637249567112 (1).jpg",
     snippet: "Official Facebook profile of Pawan Rimal (@pawan.rimal.779). Updates on web application launches, tech community mentorship in Pokhara, and software architecture articles.",
     sitelinks: [
       { label: "Connect on Facebook", url: "https://www.facebook.com/pawan.rimal.779" }
@@ -361,7 +361,7 @@ const SEARCH_DATABASE = [
     displayUrl: "instagram.com › pawan_rim",
     siteName: "Instagram · Visual Feed",
     category: "socials",
-    thumbnail: "/images/IMG-87d3fe0aece4d84800a35203eefc1660-V.jpg",
+    thumbnail: "./images/IMG-87d3fe0aece4d84800a35203eefc1660-V.jpg",
     snippet: "Follow Pawan Rimal on Instagram (@pawan_rim) for coding workspace setups, developer lifestyle in Pokhara, travel photography, and engineering stories.",
     sitelinks: [
       { label: "Follow @pawan_rim", url: "https://www.instagram.com/pawan_rim/" }
@@ -375,7 +375,7 @@ const SEARCH_DATABASE = [
     displayUrl: "api.whatsapp.com › send › phone=9779806640515",
     siteName: "WhatsApp · Instant Messaging",
     category: "socials",
-    thumbnail: "/images/photo.jpg",
+    thumbnail: "./images/photo.jpg",
     snippet: "Instant direct WhatsApp communication channel with Pawan Rimal for freelance inquiries, contract development, and tech consultancy.",
     sitelinks: [
       { label: "Send Direct WhatsApp Message", url: "https://wa.me/9779806640515" }
@@ -389,7 +389,7 @@ const SEARCH_DATABASE = [
     displayUrl: "mail.google.com › mail › u=rimalpawan4@gmail.com",
     siteName: "Google Mail · Direct Dispatch",
     category: "socials",
-    thumbnail: "/images/pawan_transparent.png",
+    thumbnail: "./images/pawan_transparent.png",
     snippet: "Send project inquiries, RFPs, or technical collaboration proposals directly to rimalpawan4@gmail.com. Available for remote engineering worldwide.",
     sitelinks: [
       { label: "Compose Email to Pawan", url: "mailto:rimalpawan4@gmail.com" }
@@ -639,22 +639,22 @@ const ALL_SKILL_CARDS = [
 const PERSONAL_PHOTOS = [
   {
     id: 'p1',
-    src: '/images/photo.jpg',
+    src: './images/photo.jpg',
     title: 'Pawan Rimal'
   },
   {
     id: 'p2',
-    src: '/images/IMG-87d3fe0aece4d84800a35203eefc1660-V.jpg',
+    src: './images/IMG-87d3fe0aece4d84800a35203eefc1660-V.jpg',
     title: 'Pawan Rimal'
   },
   {
     id: 'p3',
-    src: '/images/IMG-7fa5a26f9581d37c77e719e05c5d5c7c-V_1.jpg',
+    src: './images/IMG-7fa5a26f9581d37c77e719e05c5d5c7c-V_1.jpg',
     title: 'Pawan Rimal'
   },
   {
     id: 'p4',
-    src: '/images/FB_IMG_1637249567112 (1).jpg',
+    src: './images/FB_IMG_1637249567112 (1).jpg',
     title: 'Pawan Rimal'
   }
 ];
@@ -736,7 +736,7 @@ export default function MiniMonitorDesktop() {
       status: 'LIVE IN PRODUCTION', 
       tech: 'React.js • Next.js • Node.js • Express • PostgreSQL • Prisma',
       link: 'https://dreamsky.com.np',
-      logo: '/images/dreamsky_logo.png',
+      logo: './images/dreamsky_logo.png',
       summary: 'Centralized enterprise CRM managing student visa applications, document verification pipelines, dynamic agency commissions, and IELTS teacher schedules.'
     },
     { 
@@ -745,7 +745,7 @@ export default function MiniMonitorDesktop() {
       status: 'CLIENT DEPLOYED', 
       tech: 'HTML5 • CSS3 • JavaScript • Tailwind CSS • Django • Python • MySQL',
       link: 'https://pawan131-web.github.io/Online-shopping-/idex.html',
-      logo: '/images/annapurna_icon_gold.png',
+      logo: './images/annapurna_icon_gold.png',
       summary: 'High-converting boutique digital store featuring Cash on Delivery checkout flows, legal age verification gates, instant product filtering, and sales reports.'
     },
     { 
@@ -754,7 +754,7 @@ export default function MiniMonitorDesktop() {
       status: 'CAMPUS STAGING', 
       tech: 'HTML5 • CSS3 • JavaScript • Tailwind CSS • Node.js • Express • MongoDB • Mongoose',
       link: 'https://github.com/Pawan131-web',
-      logo: '/images/skillaunch_logo.png',
+      logo: './images/skillaunch_logo.png',
       summary: 'Campus-wide career portal that algorithmically evaluates academic coursework against live industry job requirements to recommend custom milestone pathways.'
     },
   ];
@@ -834,10 +834,10 @@ export default function MiniMonitorDesktop() {
 
                 <div className="standby-avatar-ring">
                   <img 
-                    src="/images/pawan_cutout.png" 
+                    src="./images/pawan_cutout.png" 
                     alt="Pawan Rimal Avatar" 
                     className="standby-avatar-img"
-                    onError={(e) => { e.target.src = "/images/pawan_transparent.png"; }}
+                    onError={(e) => { e.target.src = "./images/pawan_transparent.png"; }}
                   />
                   <div className="avatar-active-beacon"></div>
                 </div>
@@ -870,7 +870,7 @@ export default function MiniMonitorDesktop() {
               <div className="desktop-env-layer fade-in" onClick={() => {}}>
                 {/* Desktop Real Wallpaper Background */}
                 <div className="desktop-wallpaper-bg">
-                  <img src="/images/desktop_wallpaper.jpg" alt="macOS Desktop Wallpaper" />
+                  <img src="./images/desktop_wallpaper.jpg" alt="macOS Desktop Wallpaper" />
                   <div className="wallpaper-overlay-shade"></div>
                   <div className="desktop-reflection-sheen"></div>
                 </div>
@@ -1107,7 +1107,7 @@ export default function MiniMonitorDesktop() {
                             <div className="doc-page-paper">
                               <div className="doc-masthead">
                                 <div className="doc-author-avatar">
-                                  <img src="/images/photo.jpg" alt="Pawan Rimal" />
+                                  <img src="./images/photo.jpg" alt="Pawan Rimal" />
                                 </div>
                                 <div className="doc-author-details">
                                   <h3 className="doc-author-name font-bebas">PAWAN RIMAL</h3>

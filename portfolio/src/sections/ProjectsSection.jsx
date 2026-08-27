@@ -17,7 +17,7 @@ export default function ProjectsSection() {
       liveUrl: 'https://dreamsky.com.np',
       desc: 'Comprehensive education consultancy CRM managing end to end student visa lifecycles (Application → Acceptance → Medical → Flight), document uploads, referral commissions, and student/mentor portals for IELTS/PTE classes.',
       tech: ['React.js', 'Next.js', 'Node.js', 'Express', 'Prisma', 'PostgreSQL'],
-      logo: '/images/dreamsky_logo.png',
+      logo: './images/dreamsky_logo.png',
       githubUrl: 'https://github.com/Pawan131-web',
       accentColor: '#38BDF8'
     },
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
       liveUrl: 'https://pawan131-web.github.io/Online-shopping-/idex.html',
       desc: 'Interactive retail and institutional shopping boutique featuring a Cash on Delivery (COD) workflow, dynamic product filtering, persistent cart state, real time inventory management, and multi device responsive UX.',
       tech: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Django', 'Python', 'MySQL'],
-      logo: '/images/annapurna_icon_gold.png',
+      logo: './images/annapurna_icon_gold.png',
       githubUrl: 'https://github.com/Pawan131-web/Online-shopping-',
       accentColor: '#F59E0B'
     },
@@ -43,7 +43,7 @@ export default function ProjectsSection() {
       liveUrl: null,
       desc: 'Student internship matching platform that maps technical proficiencies against company job requirements with algorithmic skill gap analysis, progression benchmarks, and verified hiring metrics.',
       tech: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
-      logo: '/images/skillaunch_logo.png',
+      logo: './images/skillaunch_logo.png',
       githubUrl: 'https://github.com/Pawan131-web',
       accentColor: '#EF4444'
     }

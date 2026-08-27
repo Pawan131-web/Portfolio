@@ -122,11 +122,11 @@ export default function ContactSection() {
             <div className="contact-avatar-block">
               <div className="contact-avatar-circle">
                 <img 
-                  src="/images/photo.jpg" 
+                  src="./images/photo.jpg" 
                   alt="Pawan Rimal" 
                   className="contact-avatar-img"
                   onError={(e) => {
-                    e.target.src = "/images/pawan_cutout.png";
+                    e.target.src = "./images/pawan_cutout.png";
                   }}
                 />
               </div>

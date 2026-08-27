@@ -128,17 +128,17 @@ export default function ProfilSection() {
     {
       id: 'crm',
       name: 'Dream Sky CRM',
-      image: '/images/dreamsky_logo.png'
+      image: './images/dreamsky_logo.png'
     },
     {
       id: 'skillaunch',
       name: 'Skillaunch',
-      image: '/images/skillaunch_logo.png'
+      image: './images/skillaunch_logo.png'
     },
     {
       id: 'annapurna',
       name: 'Annapurna',
-      image: '/images/annapurna_icon_gold.png'
+      image: './images/annapurna_icon_gold.png'
     }
   ];
 
@@ -628,11 +628,11 @@ export default function ProfilSection() {
 
             {/* Enlarged Cutout Portrait */}
             <img 
-              src="/images/pawan_transparent.png" 
+              src="./images/pawan_transparent.png" 
               alt="Pawan Rimal" 
               className="character-cutout-img"
               onError={(e) => {
-                e.target.src = "/images/pawan_cutout.png";
+                e.target.src = "./images/pawan_cutout.png";
               }}
             />
 
@@ -1100,7 +1100,7 @@ export default function ProfilSection() {
                   onMouseEnter={SoundEngine.playHover}
                 >
                   <div className="tab-proj-logo-pod">
-                    <img src="/images/dreamsky_logo.png" alt="Dream Sky CRM" className="tab-proj-logo-img" />
+                    <img src="./images/dreamsky_logo.png" alt="Dream Sky CRM" className="tab-proj-logo-img" />
                   </div>
                   <div className="tab-proj-info-wrap">
                     <div className="tab-proj-header">
@@ -1118,7 +1118,7 @@ export default function ProfilSection() {
                   onMouseEnter={SoundEngine.playHover}
                 >
                   <div className="tab-proj-logo-pod">
-                    <img src="/images/annapurna_icon_gold.png" alt="Annapurna E Commerce" className="tab-proj-logo-img" />
+                    <img src="./images/annapurna_icon_gold.png" alt="Annapurna E Commerce" className="tab-proj-logo-img" />
                   </div>
                   <div className="tab-proj-info-wrap">
                     <div className="tab-proj-header">
@@ -1136,7 +1136,7 @@ export default function ProfilSection() {
                   onMouseEnter={SoundEngine.playHover}
                 >
                   <div className="tab-proj-logo-pod">
-                    <img src="/images/skillaunch_logo.png" alt="Skillaunch" className="tab-proj-logo-img" />
+                    <img src="./images/skillaunch_logo.png" alt="Skillaunch" className="tab-proj-logo-img" />
                   </div>
                   <div className="tab-proj-info-wrap">
                     <div className="tab-proj-header">

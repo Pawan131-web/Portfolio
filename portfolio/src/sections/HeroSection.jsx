@@ -80,11 +80,11 @@ export default function HeroSection({ onOpenOptions }) {
         <div className="hero-standalone-portrait-wrap">
           <div className="hero-portrait-stage-inner">
             <img 
-              src="/images/pawan_cutout.png" 
+              src="./images/pawan_cutout.png" 
               alt="Pawan Rimal" 
               className="hero-standalone-cutout-img"
               onError={(e) => {
-                e.target.src = "/images/pawan_transparent.png";
+                e.target.src = "./images/pawan_transparent.png";
               }}
             />
             {/* Seamless Black Ground Blend */}
