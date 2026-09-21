@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home4/dreamsky/public_html/
+    - export DEPLOYPATH=/home4/dreamsky/pawanrimal.com.np/
     - /bin/cp -R portfolio/dist/. $DEPLOYPATH
