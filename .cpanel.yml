@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home4/dreamsky/public_html/
+    - /bin/cp -R portfolio/dist/. $DEPLOYPATH
