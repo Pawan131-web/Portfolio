@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 import { SoundEngine } from '../components/SoundEngine';
 
-export default function HeroSection({ onOpenOptions }) {
+export default function HeroSection({ onOpenOptions, onOpenCv }) {
   // Current active word: 'PORTFOLIO' -> 'PAWAN RIMAL'
   const [activeWord, setActiveWord] = useState('PORTFOLIO');
   const [animKey, setAnimKey] = useState(0);
@@ -129,6 +129,19 @@ export default function HeroSection({ onOpenOptions }) {
             >
               Instagram
             </a>
+            <span className="social-divider">•</span>
+            <button 
+              className="mono-social-link font-mono"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#38bdf8', fontWeight: 600 }}
+              onMouseEnter={SoundEngine.playHover}
+              onClick={() => {
+                SoundEngine.playClick();
+                if (onOpenCv) onOpenCv();
+              }}
+              title="View & Download Official CV"
+            >
+              📄 Official CV
+            </button>
           </div>
 
           <div 

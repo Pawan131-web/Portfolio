@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './OptionsModal.css';
 import { SoundEngine } from './SoundEngine';
 
-export default function OptionsModal({ isOpen, onClose, activeTheme, setTheme, isMuted, setIsMuted }) {
+export default function OptionsModal({ isOpen, onClose, onOpenCv, activeTheme, setTheme, isMuted, setIsMuted }) {
   const [copied, setCopied] = useState(false);
 
   if (!isOpen) return null;
@@ -137,6 +137,18 @@ export default function OptionsModal({ isOpen, onClose, activeTheme, setTheme, i
           {/* Direct Actions */}
           <div className="options-section">
             <label className="options-label font-mono">DIRECT ACTIONS</label>
+            <div className="options-actions-row" style={{ marginBottom: '8px' }}>
+              <button 
+                className="btn-game-primary font-mono"
+                style={{ background: '#38bdf8', color: '#000000', borderColor: '#38bdf8' }}
+                onClick={() => {
+                  SoundEngine.playClick();
+                  if (onOpenCv) onOpenCv();
+                }}
+              >
+                📄 VIEW & DOWNLOAD OFFICIAL CV
+              </button>
+            </div>
             <div className="options-actions-row">
               <button 
                 className="btn-game-primary font-mono"

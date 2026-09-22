@@ -2,7 +2,7 @@ import React from 'react';
 import './TopNav.css';
 import { SoundEngine } from './SoundEngine';
 
-export default function TopNav({ onOpenOptions, isMuted, setIsMuted }) {
+export default function TopNav({ onOpenOptions, onOpenCv, isMuted, setIsMuted }) {
   const scrollToTop = () => {
     SoundEngine.playClick();
     const el = document.getElementById('hero-section');
@@ -21,21 +21,42 @@ export default function TopNav({ onOpenOptions, isMuted, setIsMuted }) {
   return (
     <header className="site-header">
       <div className="header-inner">
-        {/* Left Monogram Logo (PR) */}
+        {/* Left Brand Logo */}
         <div 
           className="brand-logo"
           onClick={scrollToTop}
           onMouseEnter={SoundEngine.playHover}
-          title="Pawan Rimal (PR) - Top"
+          title="Pawan Rimal - Back to Top"
         >
           <div className="logo-symbol">
-            <span className="logo-p font-bebas">P</span>
-            <span className="logo-r font-bebas">R</span>
+            <img 
+              src="./mylogo.png" 
+              alt="Pawan Logo" 
+              className="logo-custom-img"
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+            <div className="logo-fallback-text">
+              <span className="logo-p font-bebas">P</span>
+              <span className="logo-r font-bebas">R</span>
+            </div>
           </div>
         </div>
 
-        {/* Right Actions: SFX Toggle & OPTIONS Button */}
+        {/* Right Actions: CV Button, SFX Toggle & OPTIONS Button */}
         <div className="header-right-actions font-mono">
+          <button 
+            className="header-cv-btn"
+            onClick={() => {
+              SoundEngine.playClick();
+              if (onOpenCv) onOpenCv();
+            }}
+            onMouseEnter={SoundEngine.playHover}
+            title="View & Download Official CV"
+          >
+            <span className="cv-icon-glyph">📄</span>
+            <span>CV / RESUME</span>
+          </button>
+
           <button 
             className="sfx-toggle-btn"
             onClick={toggleSound}

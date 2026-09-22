@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import TopNav from './components/TopNav';
 import OptionsModal from './components/OptionsModal';
+import CvModal from './components/CvModal';
 import HeroSection from './sections/HeroSection';
 import ProfilSection from './sections/ProfilSection';
 import ProjectsSection from './sections/ProjectsSection';
@@ -11,6 +12,7 @@ import { SoundEngine } from './components/SoundEngine';
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero-section');
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+  const [isCvOpen, setIsCvOpen] = useState(false);
   const [activeTheme, setActiveTheme] = useState('default');
   const [isMuted, setIsMuted] = useState(SoundEngine.isMuted());
 
@@ -42,9 +44,10 @@ export default function App() {
   return (
     <div className="app-viewport-frame">
       <div className="inner-frame-border">
-        {/* Top Header Bar: PR Monogram Logo on Left, SFX Toggle & OPTIONS on Right */}
+        {/* Top Header Bar */}
         <TopNav 
           onOpenOptions={() => setIsOptionsOpen(true)}
+          onOpenCv={() => setIsCvOpen(true)}
           isMuted={isMuted}
           setIsMuted={setIsMuted}
         />
@@ -54,10 +57,13 @@ export default function App() {
           {/* Act 1: Game Start Menu Hero */}
           <HeroSection 
             onOpenOptions={() => setIsOptionsOpen(true)} 
+            onOpenCv={() => setIsCvOpen(true)}
           />
 
           {/* Act 2: Profil & Dossier Deck */}
-          <ProfilSection />
+          <ProfilSection 
+            onOpenCv={() => setIsCvOpen(true)}
+          />
 
           {/* Act 3: Recap Projects Showcase */}
           <ProjectsSection />
@@ -70,10 +76,17 @@ export default function App() {
         <OptionsModal 
           isOpen={isOptionsOpen}
           onClose={() => setIsOptionsOpen(false)}
+          onOpenCv={() => { setIsOptionsOpen(false); setIsCvOpen(true); }}
           activeTheme={activeTheme}
           setTheme={setActiveTheme}
           isMuted={isMuted}
           setIsMuted={setIsMuted}
+        />
+
+        {/* Interactive CV / Resume Viewer & Download Modal */}
+        <CvModal 
+          isOpen={isCvOpen}
+          onClose={() => setIsCvOpen(false)}
         />
       </div>
     </div>

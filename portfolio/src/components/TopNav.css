@@ -155,6 +155,62 @@
   }
 }
 
+.logo-custom-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+@media (min-width: 768px) {
+  .logo-custom-img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.logo-fallback-text {
+  display: none;
+}
+
+.header-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(56, 189, 248, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 9999px;
+  padding: 5px 12px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #38bdf8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .header-cv-btn {
+    padding: 6px 14px;
+    font-size: 0.72rem;
+    gap: 6px;
+  }
+}
+
+.header-cv-btn:hover {
+  background: #38bdf8;
+  color: #000000;
+  border-color: #38bdf8;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.5);
+  transform: translateY(-1px);
+}
+
+.cv-icon-glyph {
+  font-size: 0.75rem;
+}
+
 .header-options-btn:hover {
   background: rgba(255, 255, 255, 0.18);
   border-color: #ffffff;
