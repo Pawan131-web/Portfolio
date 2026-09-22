@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pawan Rimal — Curriculum Vitae</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.4;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .cv-container {
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      display: grid;
+      grid-template-columns: 68mm 142mm;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    /* LEFT SIDEBAR */
+    .sidebar {
+      background: #2c3e50 !important;
+      color: #f1f5f9;
+      padding: 26px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .photo-wrap {
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    .photo-img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid rgba(255, 255, 255, 0.25);
+    }
+    .side-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+    }
+    .contact-item {
+      font-size: 10px;
+      color: #cbd5e1;
+      margin-bottom: 5px;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+    .contact-item a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .skill-block {
+      margin-bottom: 6px;
+    }
+    .skill-cat {
+      font-size: 10px;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 1px;
+    }
+    .skill-desc {
+      font-size: 9.5px;
+      color: #cbd5e1;
+      line-height: 1.3;
+    }
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #ffffff;
+      margin-top: 4px;
+    }
+    .lang-lvl {
+      color: #94a3b8;
+      font-size: 9px;
+    }
+    .lang-bar {
+      height: 3px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 2px;
+      margin-top: 2px;
+      margin-bottom: 5px;
+    }
+    .lang-fill {
+      height: 100%;
+      background: #38bdf8;
+      border-radius: 2px;
+    }
+
+    /* RIGHT MAIN AREA */
+    .main-content {
+      background: #ffffff;
+      padding: 28px 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .main-header {
+      border-bottom: 2.5px solid #2c3e50;
+      padding-bottom: 8px;
+    }
+    .hero-name {
+      font-size: 26px;
+      font-weight: 900;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .hero-role {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #0284c7;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    .sec-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+    }
+    .summary-text {
+      font-size: 10px;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .entry-block {
+      margin-bottom: 6px;
+    }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .entry-title {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .entry-org {
+      font-size: 10px;
+      font-weight: 600;
+      color: #0284c7;
+    }
+    .entry-date {
+      font-size: 9.5px;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .bullet-list {
+      margin-top: 2px;
+      padding-left: 14px;
+    }
+    .bullet-list li {
+      font-size: 9.5px;
+      color: #475569;
+      line-height: 1.35;
+    }
+    .bullet-list li strong {
+      color: #1e293b;
+    }
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .edu-deg {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .edu-school {
+      font-size: 9.5px;
+      color: #0284c7;
+      font-weight: 600;
+    }
+    .edu-yr {
+      font-size: 9.5px;
+      color: #64748b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+      <div class="photo-wrap">
+        <img src="./images/photo.jpg" alt="Pawan Rimal" class="photo-img">
+      </div>
+
+      <div>
+        <div class="side-title">CONTACT</div>
+        <div class="contact-item">📧 <a href="mailto:rimalpawan4@gmail.com">rimalpawan4@gmail.com</a></div>
+        <div class="contact-item">📞 <a href="tel:+9779806640515">+977 9806640515</a></div>
+        <div class="contact-item">📍 Pokhara, Nepal</div>
+        <div class="contact-item">🌐 <a href="https://pawanrimal.com.np">pawanrimal.com.np</a></div>
+        <div class="contact-item">💻 <a href="https://github.com/Pawan131-web">github.com/Pawan131-web</a></div>
+      </div>
+
+      <div>
+        <div class="side-title">SKILLS</div>
+        <div class="skill-block">
+          <div class="skill-cat">Frontend</div>
+          <div class="skill-desc">React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, UI/UX</div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-cat">Backend & APIs</div>
+          <div class="skill-desc">Node.js, Express.js, Django (Python), REST APIs, JWT, GraphQL</div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-cat">Databases</div>
+          <div class="skill-desc">PostgreSQL, MongoDB, MySQL</div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-cat">Tools & Security</div>
+          <div class="skill-desc">Git/GitHub, Linux CLI, Docker, Postman, Wireshark, Burp Suite</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="side-title">LANGUAGES</div>
+        <div class="lang-row">
+          <span>English</span>
+          <span class="lang-lvl">Professional</span>
+        </div>
+        <div class="lang-bar"><div class="lang-fill" style="width: 90%;"></div></div>
+
+        <div class="lang-row">
+          <span>Nepali</span>
+          <span class="lang-lvl">Native</span>
+        </div>
+        <div class="lang-bar"><div class="lang-fill" style="width: 100%;"></div></div>
+
+        <div class="lang-row">
+          <span>Hindi</span>
+          <span class="lang-lvl">Fluent</span>
+        </div>
+        <div class="lang-bar"><div class="lang-fill" style="width: 85%;"></div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <div class="main-content">
+      <div class="main-header">
+        <h1 class="hero-name">PAWAN RIMAL</h1>
+        <div class="hero-role">Full-Stack Developer & Academic Mentor</div>
+      </div>
+
+      <div>
+        <div class="sec-title">PROFESSIONAL SUMMARY</div>
+        <p class="summary-text">
+          Results-driven Full-Stack Developer and Academic Mentor with 3+ years of experience engineering scalable web platforms, production CRMs, and e-commerce applications. Specialized in modern React architectures, Django/Node.js backend pipelines, and database optimization, with a proven record of mentoring 30+ students in software engineering.
+        </p>
+      </div>
+
+      <div>
+        <div class="sec-title">WORK HISTORY</div>
+        <div class="entry-block">
+          <div class="entry-head">
+            <span class="entry-title">Full-Stack Developer</span>
+            <span class="entry-date">2022 – Present</span>
+          </div>
+          <div class="entry-org">Freelance & Independent Client Contracts — Remote & Nepal</div>
+          <ul class="bullet-list">
+            <li>Engineered and shipped 5+ full-stack web applications, consultancy CRMs, and e-commerce platforms with end-to-end client lifecycle workflows.</li>
+            <li>Integrated secure JWT authentication, robust RESTful APIs, and optimized PostgreSQL/MySQL databases for fast response times.</li>
+          </ul>
+        </div>
+
+        <div class="entry-block">
+          <div class="entry-head">
+            <span class="entry-title">Networking & Web Design Intern</span>
+            <span class="entry-date">2026</span>
+          </div>
+          <div class="entry-org">Nepal Telecom (NTC) — Pokhara, Nepal</div>
+          <ul class="bullet-list">
+            <li>Assisted in enterprise telecom network diagnostic workflows, routing protocols, and web infrastructure compliance standards.</li>
+          </ul>
+        </div>
+
+        <div class="entry-block">
+          <div class="entry-head">
+            <span class="entry-title">Academic & ICT Programming Mentor</span>
+            <span class="entry-date">2022 – Present</span>
+          </div>
+          <div class="entry-org">Independent Mentorship — Pokhara, Nepal</div>
+          <ul class="bullet-list">
+            <li>Instructed and mentored 30+ students in core data structures, algorithms, relational database normalization (SQL), and full-stack development.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-title">KEY PROJECTS</div>
+        <div class="entry-block">
+          <div class="entry-head">
+            <span class="entry-title">Dream Sky Consultancy CRM</span>
+            <span class="entry-date">React • Node • PostgreSQL • Prisma</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Architected full-scale consultancy CRM managing student visa applications, document verification pipelines, and IELTS portals. (Live: <strong>dreamsky.com.np</strong>)</li>
+          </ul>
+        </div>
+
+        <div class="entry-block">
+          <div class="entry-head">
+            <span class="entry-title">Annapurna Cheers Liquor Store</span>
+            <span class="entry-date">Django • Python • MySQL • Tailwind</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Developed responsive boutique digital storefront with Cash on Delivery (COD) checkout pipelines, legal age gates, and merchant sales analytics.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-title">EDUCATION</div>
+        <div class="edu-row">
+          <div>
+            <div class="edu-deg">Bachelor of Information Management (BIM)</div>
+            <div class="edu-school">Janapriya Multiple Campus — Tribhuvan University</div>
+          </div>
+          <div class="edu-yr">2021 – Present</div>
+        </div>
+
+        <div class="edu-row" style="margin-top: 4px;">
+          <div>
+            <div class="edu-deg">+2 Science & Computer Science</div>
+            <div class="edu-school">Amarsingh Model Secondary School</div>
+          </div>
+          <div class="edu-yr">2019 – 2021</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

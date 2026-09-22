@@ -24,6 +24,93 @@ export default function CvModal({ isOpen, onClose }) {
     window.print();
   };
 
+  const handleDownloadDoc = () => {
+    SoundEngine.playClick();
+    const docHtml = `
+      <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+      <head><meta charset='utf-8'><title>Pawan Rimal CV</title>
+      <style>
+        body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; color: #333333; line-height: 1.4; }
+        h1 { font-size: 22pt; color: #1e293b; margin-bottom: 2pt; text-transform: uppercase; }
+        h2 { font-size: 13pt; color: #0284c7; margin-top: 14pt; margin-bottom: 4pt; border-bottom: 1.5pt solid #0284c7; text-transform: uppercase; }
+        .subtitle { font-size: 12pt; color: #0284c7; font-weight: bold; margin-bottom: 8pt; }
+        .contact { font-size: 10pt; color: #64748b; margin-bottom: 12pt; }
+        .job-title { font-weight: bold; color: #0f172a; font-size: 11pt; }
+        .company { color: #0284c7; font-weight: bold; }
+        .date { color: #64748b; font-style: italic; float: right; }
+        ul { margin-top: 3pt; margin-bottom: 8pt; padding-left: 18pt; }
+        li { margin-bottom: 3pt; }
+      </style>
+      </head>
+      <body>
+        <h1>PAWAN RIMAL</h1>
+        <div class="subtitle">Full-Stack Developer & Academic Mentor</div>
+        <div class="contact">
+          Pokhara, Nepal | Phone: +977 9806640515 | Email: rimalpawan4@gmail.com | Portfolio: https://pawanrimal.com.np | GitHub: https://github.com/Pawan131-web
+        </div>
+
+        <h2>Professional Summary</h2>
+        <p>
+          Results-driven Full-Stack Developer and Academic Mentor with 3+ years of experience engineering scalable web platforms, production CRMs, and e-commerce applications. Specialized in modern React architectures, Django/Node.js backend pipelines, and database optimization, with a proven record of mentoring 30+ students in software engineering.
+        </p>
+
+        <h2>Technical Skills</h2>
+        <p>
+          <b>Frontend:</b> React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Responsive UI/UX<br>
+          <b>Backend & APIs:</b> Node.js, Express.js, Django (Python), REST APIs, JWT Auth, GraphQL<br>
+          <b>Databases:</b> PostgreSQL, MongoDB, MySQL<br>
+          <b>Tools & Security:</b> Git & GitHub, Linux CLI, Docker, Postman, Wireshark, Burp Suite
+        </p>
+
+        <h2>Work Experience</h2>
+        <p><span class="job-title">Full-Stack Developer</span> | <span class="company">Freelance & Independent Client Contracts</span> <span class="date">2022 – Present</span></p>
+        <ul>
+          <li>Engineered and shipped 5+ full-stack web applications, consultancy CRMs, and e-commerce platforms with end-to-end client lifecycle workflows.</li>
+          <li>Integrated secure JWT authentication, robust RESTful APIs, and optimized PostgreSQL/MySQL databases for fast response times.</li>
+        </ul>
+
+        <p><span class="job-title">Networking & Web Design Intern</span> | <span class="company">Nepal Telecom (NTC)</span> <span class="date">2026</span></p>
+        <ul>
+          <li>Assisted in enterprise telecom network diagnostic workflows, routing protocols, and web infrastructure compliance standards.</li>
+        </ul>
+
+        <p><span class="job-title">Academic & ICT Programming Mentor</span> | <span class="company">Independent Mentorship</span> <span class="date">2022 – Present</span></p>
+        <ul>
+          <li>Instructed and mentored 30+ students in core data structures, algorithms, relational database normalization (SQL), and full-stack development.</li>
+        </ul>
+
+        <h2>Key Projects</h2>
+        <p><b>Dream Sky Consultancy CRM</b> (React • Node • PostgreSQL • Prisma) — <i>https://dreamsky.com.np</i></p>
+        <ul>
+          <li>Architected full-scale consultancy CRM managing student visa applications, document verification pipelines, and IELTS portals.</li>
+        </ul>
+
+        <p><b>Annapurna Cheers Liquor Store</b> (Django • Python • MySQL • Tailwind) — <i>https://pawan131-web.github.io/Online-shopping-/idex.html</i></p>
+        <ul>
+          <li>Developed responsive boutique digital storefront with Cash on Delivery (COD) checkout pipelines, legal age gates, and merchant sales analytics.</li>
+        </ul>
+
+        <h2>Education</h2>
+        <p><b>Bachelor of Information Management (BIM)</b> (2021 – Present)<br>Janapriya Multiple Campus — Tribhuvan University, Nepal</p>
+        <p><b>+2 Science & Computer Science</b> (2019 – 2021)<br>Amarsingh Model Secondary School — Pokhara, Nepal</p>
+
+        <h2>Languages</h2>
+        <p>English (Professional Working), Nepali (Native), Hindi (Fluent)</p>
+      </body>
+      </html>
+    `;
+
+    const blob = new Blob(['\ufeff' + docHtml], { type: 'application/msword' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Pawan_Rimal_CV.doc';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   const handleDownloadTxt = () => {
     SoundEngine.playClick();
     const textContent = `PAWAN RIMAL
@@ -110,17 +197,24 @@ LANGUAGES
           <div className="cv-toolbar-actions">
             <button 
               className="cv-download-btn font-mono" 
+              onClick={handleDownloadDoc}
+              title="Download editable Word Document (.doc)"
+            >
+              <span>📥 DOWNLOAD CV (.DOC)</span>
+            </button>
+            <button 
+              className="cv-txt-btn font-mono" 
               onClick={handlePrint}
               title="Save clean 1-page PDF / Print"
             >
-              <span>📥 DOWNLOAD PDF / PRINT</span>
+              <span>🖨️ PDF / PRINT</span>
             </button>
             <button 
               className="cv-txt-btn font-mono" 
               onClick={handleDownloadTxt}
-              title="Download Plain Text Format"
+              title="Download Plain Text Format (.txt)"
             >
-              <span>📄 TXT FORMAT</span>
+              <span>📄 TXT</span>
             </button>
             <button 
               className="cv-close-btn" 
