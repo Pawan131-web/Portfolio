@@ -29,61 +29,61 @@ export default function CvModal({ isOpen, onClose }) {
     const textContent = `PAWAN RIMAL
 Full-Stack Developer & Academic Mentor
 Location: Pokhara, Nepal (Available Worldwide & Remote)
-Email: rimalpawan4@gmail.com | Phone: +977 9806640515
-GitHub: https://github.com/Pawan131-web | Portfolio: https://pawanrimal.com.np
+Phone: +977 9806640515 | Email: rimalpawan4@gmail.com
+Portfolio: https://pawanrimal.com.np | GitHub: https://github.com/Pawan131-web
 
 ============================================================
 PROFESSIONAL SUMMARY
 ============================================================
-Full-Stack Developer and Academic Mentor based in Pokhara, Nepal.
-3+ years of experience engineering production-grade web systems from full-scale consultancy CRM architectures managing end-to-end client lifecycles to high-converting e-commerce web applications.
-Currently mentoring 30+ students in software engineering and algorithms.
+Results-driven Full-Stack Developer and Academic Mentor with 3+ years of experience engineering scalable web platforms, production CRMs, and e-commerce applications. Specialized in modern React architectures, Django/Node.js backend pipelines, and database optimization, with a proven record of mentoring 30+ students in software engineering.
 
 ============================================================
 TECHNICAL SKILLS
 ============================================================
-• Frontend & UI/UX: React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Framer Motion, Responsive Web Architecture.
-• Backend & APIs: Node.js, Express.js, Django (Python), PostgreSQL, MongoDB, MySQL, REST APIs, JWT Authentication, GraphQL.
-• Tools, DevOps & Security: Git & GitHub, Linux CLI, Docker, Postman, Wireshark, Burp Suite, VS Code.
+• Frontend: React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Responsive UI/UX
+• Backend & APIs: Node.js, Express.js, Django (Python), REST APIs, JWT Auth, GraphQL
+• Databases: PostgreSQL, MongoDB, MySQL
+• Tools & Security: Git & GitHub, Linux CLI, Docker, Postman, Wireshark, Burp Suite
+
+============================================================
+WORK EXPERIENCE
+============================================================
+• Full-Stack Developer | Freelance & Independent Contracts (2022 – Present)
+  - Engineered and shipped 5+ full-stack web applications, consultancy CRMs, and e-commerce stores with end-to-end client lifecycle management.
+  - Implemented secure JWT user authentication, robust RESTful APIs, and optimized PostgreSQL/MySQL relational databases for production speed.
+
+• Networking & Web Design Intern | Nepal Telecom (NTC) (2026)
+  - Assisted in enterprise telecom network diagnostic workflows, routing protocols, and web infrastructure compliance.
+
+• Academic & ICT Mentor | Pokhara, Nepal (2022 – Present)
+  - Instructed and mentored 30+ students in data structures, algorithms, relational database normalization (SQL), and full-stack software development.
 
 ============================================================
 KEY PROJECTS
 ============================================================
-1. Dream Sky Consultancy CRM (Production Platform)
-   • Technologies: React.js, Node.js, Express, PostgreSQL, Prisma, JWT Auth.
-   • URL: https://dreamsky.com.np
-   • Comprehensive consultancy CRM managing full student visa lifecycles, encrypted document verification, referral commission analytics, and student/teacher IELTS portals.
+• Dream Sky Consultancy CRM (Production Platform)
+  - Built a full-stack platform managing student visa lifecycles, encrypted document verification, and IELTS teacher portals (React, Node, PostgreSQL, Prisma).
+  - URL: https://dreamsky.com.np
 
-2. Annapurna Cheers Liquor & E-Commerce Store
-   • Technologies: Django, Python, Tailwind CSS, MySQL, JavaScript.
-   • URL: https://pawan131-web.github.io/Online-shopping-/idex.html
-   • High-converting boutique digital storefront featuring Cash on Delivery (COD) workflows, regulatory age gates, instant catalog filtering, and merchant sales analytics.
-
-3. Skillaunch: Skill Mapping & Career Discovery Engine
-   • Technologies: React, Node.js, Express, MongoDB, Tailwind CSS.
-   • URL: https://github.com/Pawan131-web
-   • Campus-wide internship discovery engine intelligently mapping student proficiencies against live industry job requirements with gap analysis and progression milestones.
-
-============================================================
-PROFESSIONAL EXPERIENCE
-============================================================
-• Networking & Web Design Intern | Nepal Telecom (NTC) (2026)
-  Hands-on enterprise network infrastructure, routing diagnostics, web standards, and telecommunication systems.
-
-• Full-Stack Developer | Freelance & Independent Contracts (2022 - Present)
-  Delivered custom web applications, full-stack architectures, and backend database integrations for clients.
-
-• Academic & ICT Programming Mentor | Pokhara, Nepal (Ongoing)
-  Mentored and instructed 30+ students in core data structures, algorithms, relational database normalization, and full-stack development.
+• Annapurna Cheers Liquor Store (Boutique E-Commerce Storefront)
+  - Delivered a boutique digital store with Cash on Delivery (COD) checkout pipelines, regulatory age verification gates, and sales analytics (Django, Python, MySQL).
+  - URL: https://pawan131-web.github.io/Online-shopping-/idex.html
 
 ============================================================
 EDUCATION
 ============================================================
-• Bachelor of Information Management (BIM) (2021 - Present)
+• Bachelor of Information Management (BIM) (2021 – Present)
   Janapriya Multiple Campus • Tribhuvan University, Nepal
 
-• +2 Science & Computer Science (2019 - 2021)
+• +2 Science & Computer Science (2019 – 2021)
   Amarsingh Model Secondary School • Sainik Awasiya Mahavidyalaya
+
+============================================================
+LANGUAGES
+============================================================
+• English: Professional Working Proficiency
+• Nepali: Native
+• Hindi: Fluent
 `;
 
     const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8' });
@@ -100,20 +100,20 @@ EDUCATION
   return (
     <div className="cv-modal-backdrop" onClick={onClose}>
       <div className="cv-modal-container" onClick={(e) => e.stopPropagation()}>
-        {/* Modal Toolbar */}
+        {/* Modal Top Action Toolbar */}
         <div className="cv-modal-toolbar font-mono">
           <div className="cv-toolbar-left">
-            <span className="cv-doc-badge">OFFICIAL CV</span>
-            <h3 className="cv-doc-title font-sans">Pawan Rimal — Curriculum Vitae</h3>
+            <span className="cv-doc-badge">EXECUTIVE CV</span>
+            <h3 className="cv-doc-title font-sans">Pawan Rimal — Professional One-Page Resume</h3>
           </div>
 
           <div className="cv-toolbar-actions">
             <button 
               className="cv-download-btn font-mono" 
               onClick={handlePrint}
-              title="Print or Save as PDF"
+              title="Save clean 1-page PDF / Print"
             >
-              <span>📥 SAVE AS PDF / PRINT</span>
+              <span>📥 DOWNLOAD PDF / PRINT</span>
             </button>
             <button 
               className="cv-txt-btn font-mono" 
@@ -132,153 +132,208 @@ EDUCATION
           </div>
         </div>
 
-        {/* Scrollable Paper Preview */}
+        {/* Modal Body: Two-Column One-Page CV Document */}
         <div className="cv-modal-body">
-          <div className="cv-paper-document">
-            {/* Header / Contact */}
-            <div className="cv-header-block">
-              <div>
-                <h1 className="cv-name-main">PAWAN RIMAL</h1>
-                <p className="cv-headline-sub">Full-Stack Developer & Academic Mentor</p>
-                <div style={{ fontSize: '0.84rem', color: '#64748b', marginTop: '4px' }}>
-                  Pokhara, Nepal (Available Worldwide & Remote)
+          <div className="cv-sheet-a4">
+            
+            {/* ────────────────────────────────────────────────────────
+               LEFT SIDEBAR COLUMN
+               ──────────────────────────────────────────────────────── */}
+            <aside className="cv-sidebar-left">
+              {/* Profile Photo */}
+              <div className="cv-photo-frame">
+                <img 
+                  src="./images/photo.jpg" 
+                  alt="Pawan Rimal" 
+                  className="cv-photo-img"
+                  onError={(e) => { e.target.src = "./images/normal.jpg"; }}
+                />
+              </div>
+
+              {/* Contact Information */}
+              <div className="cv-side-block">
+                <h4 className="cv-side-heading">CONTACT</h4>
+                <div className="cv-contact-list font-sans">
+                  <div className="cv-contact-item">
+                    <span className="cv-contact-icon">📧</span>
+                    <a href="mailto:rimalpawan4@gmail.com">rimalpawan4@gmail.com</a>
+                  </div>
+                  <div className="cv-contact-item">
+                    <span className="cv-contact-icon">📞</span>
+                    <a href="tel:+9779806640515">+977 9806640515</a>
+                  </div>
+                  <div className="cv-contact-item">
+                    <span className="cv-contact-icon">📍</span>
+                    <span>Pokhara, Nepal</span>
+                  </div>
+                  <div className="cv-contact-item">
+                    <span className="cv-contact-icon">🌐</span>
+                    <a href="https://pawanrimal.com.np" target="_blank" rel="noreferrer">pawanrimal.com.np</a>
+                  </div>
+                  <div className="cv-contact-item">
+                    <span className="cv-contact-icon">💻</span>
+                    <a href="https://github.com/Pawan131-web" target="_blank" rel="noreferrer">github.com/Pawan131-web</a>
+                  </div>
                 </div>
               </div>
 
-              <div className="cv-contact-info-grid font-mono">
-                <div>📧 <a href="mailto:rimalpawan4@gmail.com" className="cv-contact-link">rimalpawan4@gmail.com</a></div>
-                <div>📞 <a href="tel:+9779806640515" className="cv-contact-link">+977 9806640515</a></div>
-                <div>🌐 <a href="https://pawanrimal.com.np" target="_blank" rel="noreferrer" className="cv-contact-link">pawanrimal.com.np</a></div>
-                <div>💻 <a href="https://github.com/Pawan131-web" target="_blank" rel="noreferrer" className="cv-contact-link">github.com/Pawan131-web</a></div>
-              </div>
-            </div>
-
-            {/* Executive Summary */}
-            <div className="cv-section">
-              <h2 className="cv-section-title">Professional Summary</h2>
-              <p className="cv-prose-summary">
-                Results-driven Full-Stack Software Developer with over 3 years of experience engineering scalable web platforms, mission-critical databases, and enterprise CRM solutions. Proven track record deploying production systems for corporate consultancies and e-commerce merchants. Dedicated educator who has mentored 30+ students in programming fundamentals, algorithms, and full-stack software architecture.
-              </p>
-            </div>
-
-            {/* Technical Skills */}
-            <div className="cv-section">
-              <h2 className="cv-section-title">Technical Competencies</h2>
-              <div className="cv-skills-summary-grid">
-                <div className="cv-skill-item">
-                  <strong>Frontend:</strong> React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Responsive UI/UX.
+              {/* Skills Section */}
+              <div className="cv-side-block">
+                <h4 className="cv-side-heading">SKILLS</h4>
+                <div className="cv-skill-group">
+                  <span className="cv-skill-group-title">Frontend</span>
+                  <p className="cv-skill-tags-text">React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, UI/UX</p>
                 </div>
-                <div className="cv-skill-item">
-                  <strong>Backend:</strong> Node.js, Express.js, Django (Python), REST APIs, JWT Auth, GraphQL.
+                <div className="cv-skill-group">
+                  <span className="cv-skill-group-title">Backend & APIs</span>
+                  <p className="cv-skill-tags-text">Node.js, Express.js, Django (Python), REST APIs, JWT Auth, GraphQL</p>
                 </div>
-                <div className="cv-skill-item">
-                  <strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, Database Normalization & Indexing.
+                <div className="cv-skill-group">
+                  <span className="cv-skill-group-title">Databases</span>
+                  <p className="cv-skill-tags-text">PostgreSQL, MongoDB, MySQL</p>
                 </div>
-                <div className="cv-skill-item">
-                  <strong>Tools & Security:</strong> Git & GitHub, Linux CLI, Docker, Postman, Wireshark, Burp Suite.
-                </div>
-              </div>
-            </div>
-
-            {/* Featured Projects */}
-            <div className="cv-section">
-              <h2 className="cv-section-title">Key Projects</h2>
-
-              <div className="cv-entry-card">
-                <div className="cv-entry-header">
-                  <span className="cv-entry-title">Dream Sky Consultancy CRM</span>
-                  <span className="cv-entry-period">Production Platform</span>
-                </div>
-                <div className="cv-entry-desc">
-                  Architected an enterprise-level education consultancy CRM managing end-to-end student visa lifecycles (Application → University Offer → Medical → Visa Grant), encrypted document verification, referral commission tracking, and student/teacher IELTS class scheduling.
-                </div>
-                <div className="cv-entry-tech">Tech Stack: React.js, Node.js, Express, PostgreSQL, Prisma, JWT</div>
-              </div>
-
-              <div className="cv-entry-card">
-                <div className="cv-entry-header">
-                  <span className="cv-entry-title">Annapurna Cheers Liquor & E-Commerce</span>
-                  <span className="cv-entry-period">Client Deployment</span>
-                </div>
-                <div className="cv-entry-desc">
-                  Engineered high-converting digital storefront featuring Cash on Delivery (COD) checkout pipelines, legal age verification gates, instant product filtering, cart management, and merchant sales analytics.
-                </div>
-                <div className="cv-entry-tech">Tech Stack: Django, Python, Tailwind CSS, MySQL, JavaScript</div>
-              </div>
-
-              <div className="cv-entry-card">
-                <div className="cv-entry-header">
-                  <span className="cv-entry-title">Skillaunch: Campus Career & Skill Discovery Engine</span>
-                  <span className="cv-entry-period">Campus Staging</span>
-                </div>
-                <div className="cv-entry-desc">
-                  Developed an internship discovery engine that matches student academic competencies against live industry requirements with automated gap analysis and milestone recommendations.
-                </div>
-                <div className="cv-entry-tech">Tech Stack: React, Node.js, Express, MongoDB, Tailwind CSS</div>
-              </div>
-            </div>
-
-            {/* Experience */}
-            <div className="cv-section">
-              <h2 className="cv-section-title">Work Experience</h2>
-
-              <div className="cv-entry-card">
-                <div className="cv-entry-header">
-                  <span className="cv-entry-title">Networking & Web Design Intern</span>
-                  <span className="cv-entry-period">2026</span>
-                </div>
-                <div className="cv-entry-org">Nepal Telecom (NTC) • Pokhara, Nepal</div>
-                <div className="cv-entry-desc">
-                  Gained practical experience in large-scale telecom network infrastructure, routing protocols, diagnostic troubleshooting, and modern web application security standards.
+                <div className="cv-skill-group">
+                  <span className="cv-skill-group-title">Tools & Security</span>
+                  <p className="cv-skill-tags-text">Git & GitHub, Linux CLI, Docker, Postman, Wireshark, Burp Suite</p>
                 </div>
               </div>
 
-              <div className="cv-entry-card">
-                <div className="cv-entry-header">
-                  <span className="cv-entry-title">Full-Stack Freelance Developer</span>
-                  <span className="cv-entry-period">2022 – Present</span>
+              {/* Languages Section */}
+              <div className="cv-side-block">
+                <h4 className="cv-side-heading">LANGUAGES</h4>
+                <div>
+                  <div className="cv-lang-item font-sans">
+                    <span>English</span>
+                    <span className="cv-lang-level">Professional</span>
+                  </div>
+                  <div className="cv-lang-bar">
+                    <div className="cv-lang-fill" style={{ width: '90%' }}></div>
+                  </div>
                 </div>
-                <div className="cv-entry-org">Independent • Remote & Local Clients</div>
-                <div className="cv-entry-desc">
-                  Designed, developed, and deployed full-lifecycle web applications, CRM solutions, and e-commerce platforms with clean, performant, and secure code.
+                <div style={{ marginTop: '6px' }}>
+                  <div className="cv-lang-item font-sans">
+                    <span>Nepali</span>
+                    <span className="cv-lang-level">Native</span>
+                  </div>
+                  <div className="cv-lang-bar">
+                    <div className="cv-lang-fill" style={{ width: '100%' }}></div>
+                  </div>
                 </div>
-              </div>
-
-              <div className="cv-entry-card">
-                <div className="cv-entry-header">
-                  <span className="cv-entry-title">Academic & ICT Programming Mentor</span>
-                  <span className="cv-entry-period">Ongoing</span>
-                </div>
-                <div className="cv-entry-org">Pokhara, Nepal (30+ Students Mentored)</div>
-                <div className="cv-entry-desc">
-                  Instructed university and high-school students in data structures, relational database normalization, web development, and practical software engineering.
-                </div>
-              </div>
-            </div>
-
-            {/* Education */}
-            <div className="cv-section" style={{ marginBottom: 0 }}>
-              <h2 className="cv-section-title">Education</h2>
-
-              <div className="cv-entry-card">
-                <div className="cv-entry-header">
-                  <span className="cv-entry-title">Bachelor of Information Management (BIM)</span>
-                  <span className="cv-entry-period">2021 – Present</span>
-                </div>
-                <div className="cv-entry-org">Janapriya Multiple Campus • Tribhuvan University</div>
-                <div className="cv-entry-desc">
-                  Comprehensive curriculum encompassing software engineering, database management systems, network infrastructure, and business administration.
+                <div style={{ marginTop: '6px' }}>
+                  <div className="cv-lang-item font-sans">
+                    <span>Hindi</span>
+                    <span className="cv-lang-level">Fluent</span>
+                  </div>
+                  <div className="cv-lang-bar">
+                    <div className="cv-lang-fill" style={{ width: '85%' }}></div>
+                  </div>
                 </div>
               </div>
+            </aside>
 
-              <div className="cv-entry-card" style={{ marginBottom: 0 }}>
-                <div className="cv-entry-header">
-                  <span className="cv-entry-title">+2 Science & Computer</span>
-                  <span className="cv-entry-period">2019 – 2021</span>
-                </div>
-                <div className="cv-entry-org">Amarsingh Model Secondary School • Sainik Awasiya Mahavidyalaya</div>
+            {/* ────────────────────────────────────────────────────────
+               RIGHT MAIN COLUMN
+               ──────────────────────────────────────────────────────── */}
+            <main className="cv-main-right">
+              {/* Header: Name & Title */}
+              <div className="cv-main-header">
+                <h1 className="cv-hero-name">PAWAN RIMAL</h1>
+                <p className="cv-hero-title">FULL-STACK DEVELOPER & ACADEMIC MENTOR</p>
               </div>
-            </div>
+
+              {/* Professional Summary */}
+              <section className="cv-main-section">
+                <h3 className="cv-main-section-title">PROFESSIONAL SUMMARY</h3>
+                <p className="cv-summary-prose">
+                  Results-driven Full-Stack Developer and Academic Mentor with 3+ years of experience engineering scalable web platforms, production CRMs, and e-commerce applications. Specialized in modern React architectures, Django/Node.js backend pipelines, and database optimization, with a proven record of mentoring 30+ students in software engineering.
+                </p>
+              </section>
+
+              {/* Work History / Experience */}
+              <section className="cv-main-section">
+                <h3 className="cv-main-section-title">WORK HISTORY</h3>
+
+                <div className="cv-job-entry">
+                  <div className="cv-job-header-row">
+                    <span className="cv-job-role">Full-Stack Developer</span>
+                    <span className="cv-job-duration">2022 – Present</span>
+                  </div>
+                  <div className="cv-job-company">Freelance & Independent Client Contracts — Remote & Nepal</div>
+                  <ul className="cv-bullet-list">
+                    <li>Engineered and shipped 5+ full-stack web applications, consultancy CRMs, and e-commerce platforms with end-to-end client lifecycle workflows.</li>
+                    <li>Integrated secure JWT authentication, robust RESTful APIs, and optimized PostgreSQL/MySQL databases for fast response times.</li>
+                  </ul>
+                </div>
+
+                <div className="cv-job-entry">
+                  <div className="cv-job-header-row">
+                    <span className="cv-job-role">Networking & Web Design Intern</span>
+                    <span className="cv-job-duration">2026</span>
+                  </div>
+                  <div className="cv-job-company">Nepal Telecom (NTC) — Pokhara, Nepal</div>
+                  <ul className="cv-bullet-list">
+                    <li>Assisted in enterprise telecom network diagnostic workflows, routing protocols, and web infrastructure compliance standards.</li>
+                  </ul>
+                </div>
+
+                <div className="cv-job-entry">
+                  <div className="cv-job-header-row">
+                    <span className="cv-job-role">Academic & ICT Programming Mentor</span>
+                    <span className="cv-job-duration">2022 – Present</span>
+                  </div>
+                  <div className="cv-job-company">Independent Mentorship — Pokhara, Nepal</div>
+                  <ul className="cv-bullet-list">
+                    <li>Instructed and mentored 30+ students in core data structures, algorithms, relational database normalization (SQL), and full-stack development.</li>
+                  </ul>
+                </div>
+              </section>
+
+              {/* Key Projects */}
+              <section className="cv-main-section">
+                <h3 className="cv-main-section-title">KEY PROJECTS</h3>
+
+                <div className="cv-job-entry">
+                  <div className="cv-job-header-row">
+                    <span className="cv-job-role">Dream Sky Consultancy CRM</span>
+                    <span className="cv-job-duration">React • Node • PostgreSQL • Prisma</span>
+                  </div>
+                  <ul className="cv-bullet-list">
+                    <li>Architected full-scale consultancy CRM managing student visa applications, document verification pipelines, and IELTS portals. (Live: <strong>dreamsky.com.np</strong>)</li>
+                  </ul>
+                </div>
+
+                <div className="cv-job-entry">
+                  <div className="cv-job-header-row">
+                    <span className="cv-job-role">Annapurna Cheers Liquor Store</span>
+                    <span className="cv-job-duration">Django • Python • MySQL • Tailwind</span>
+                  </div>
+                  <ul className="cv-bullet-list">
+                    <li>Developed responsive boutique digital storefront with Cash on Delivery (COD) checkout pipelines, legal age gates, and merchant sales analytics.</li>
+                  </ul>
+                </div>
+              </section>
+
+              {/* Education */}
+              <section className="cv-main-section">
+                <h3 className="cv-main-section-title">EDUCATION</h3>
+
+                <div className="cv-edu-entry">
+                  <div>
+                    <span className="cv-edu-degree">Bachelor of Information Management (BIM)</span>
+                    <div className="cv-edu-inst">Janapriya Multiple Campus — Tribhuvan University</div>
+                  </div>
+                  <span className="cv-edu-year">2021 – Present</span>
+                </div>
+
+                <div className="cv-edu-entry">
+                  <div>
+                    <span className="cv-edu-degree">+2 Science & Computer Science</span>
+                    <div className="cv-edu-inst">Amarsingh Model Secondary School</div>
+                  </div>
+                  <span className="cv-edu-year">2019 – 2021</span>
+                </div>
+              </section>
+            </main>
           </div>
         </div>
       </div>
